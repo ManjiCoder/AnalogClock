@@ -1,35 +1,69 @@
 // THIS IS FOR SECONDS
 let sec = document.getElementById('sec')
-sec.style.transform = "rotate(90deg)"
-let s = 90;
-
-// THIS IS FOR MINITUES
 let min = document.getElementById('min')
-min.style.transform = "rotate(90deg)"
-let m = 90;
-
-// THIS IS FOR HOURS
 let hr = document.getElementById('hr')
+
+// SETTING ALL HANDS TO 12;
+sec.style.transform = "rotate(90deg)"
+min.style.transform = "rotate(90deg)"
 hr.style.transform = "rotate(90deg)"
-let h = 90;
+let rotate = 90;
+let s = rotate;
 
 // THIS IS FOR SECONDS
 setInterval(() => {
-    s += 6;
-    sec.style.transition = "all 1s"
-    sec.style.transform = "rotate(" + s + "deg)";
+    // Variables Declaraiton
+    let date = new Date()
+    let secs = date.getUTCSeconds()
+    // secs = 30;
+    if (secs == 0) {
+        s = 90;
+    }
+    if (secs != 0) {
+        s += 6;
+        let rotation = rotate;
+        rotation = rotate + secs * 6;
+        sec.style.transform = "rotate(" + rotation + "deg)";
+
+    }
 }, 1000);
 
 // THIS IS FOR MINITUES
 setInterval(() => {
-    m += 6;
-    min.style.transition = "all 1s"
-    min.style.transform = "rotate(" + m + "deg)";
-}, 1000 * 60);
+    // Variables Declaraiton
+    let date = new Date()
+    let mins = date.getMinutes()
+    // mins = 46;
+    if (mins == 0) {
+        s = 90;
+    }
+    if (mins != 0) {
+        s += 6;
+        let rotation = rotate;
+        rotation = rotate + mins * 6;
+        min.style.transform = "rotate(" + rotation + "deg)";
+
+    }
+    // console.log(mins);
+}, 1000);
 
 // THIS IS FOR HOURS
 setInterval(() => {
-    h += 6;
-    hr.style.transition = "all 1s"
-    hr.style.transform = "rotate(" + h + "deg)";
-}, 1000 * 60 * 60);
+    // Variables Declaraiton
+    let date = new Date()
+    let hrs = date.getHours()
+    // hrs = 12;
+    if (hrs == 0) {
+        s = 90;
+        // hrs = 3;
+    }
+    if (hrs != 0) {
+        s += 6;
+        let rotation = rotate;
+        // rotate = 270;
+        rotation = rotate + hrs * 6;
+        console.log(rotation);
+        hr.style.transform = "rotate(" + rotation + "deg)";
+    }
+    // console.log(hrs);
+}, 1000);

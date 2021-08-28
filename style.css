@@ -12,7 +12,7 @@
 .container {
     color: white;
     text-shadow: 1px 1px black;
-    height: 100vh;
+    /* height: 100vh; */
     width: 100%;
     padding: 2rem;
     background: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486); 
@@ -29,10 +29,20 @@ h1 {
     justify-content: center;
     align-items: center;
     height: 225px;
-    width: 220px;
+    width: 225px;
     margin: 3rem auto;
     border: 2px solid white;
     border-radius: 50%;
+}
+
+#centerCircle{
+    position: absolute;
+    height: 7px;
+    width: 7px;
+    border-radius: 11px;
+    z-index: 3;
+    background: white;
+    box-shadow: 0.5px 0.5px 4px 0.5px black;
 }
 
 .hands {
@@ -46,8 +56,8 @@ h1 {
     content: "";
     height: 5px;
     width: 90px;
-    background: tomato;
-    z-index: 1;
+    background: whitesmoke;
+    z-index: 2;
 }
 
 #min::before {
@@ -65,7 +75,7 @@ h1 {
     height: 5px;
     width: 90px;
     background: yellow;
-    z-index: 1;
+    z-index: 0;
 }
 
 /* DO NOT USE ID or CLASS USE Pseudo Selector to show 50% visibility of the Elements */
