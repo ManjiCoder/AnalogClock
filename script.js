@@ -48,21 +48,20 @@ setInterval(() => {
 }, 1000);
 
 // THIS IS FOR HOURS
+// Hours had different rotation as compared to Minutes & Seconds
 setInterval(() => {
     // Variables Declaraiton
     let date = new Date()
     let hrs = date.getHours()
-    // hrs = 12;
+    // hrs = 18;
     if (hrs == 0) {
         s = 90;
-        // hrs = 3;
     }
     if (hrs != 0) {
-        s += 6;
+        s = s + 30;
         let rotation = rotate;
-        // rotate = 270;
-        rotation = rotate + hrs * 6;
-        console.log(rotation);
+        rotation = rotate + hrs * 30;
+        // console.log(rotation);
         hr.style.transform = "rotate(" + rotation + "deg)";
     }
     // console.log(hrs);
