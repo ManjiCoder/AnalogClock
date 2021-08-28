@@ -12,15 +12,15 @@
 .container {
     color: white;
     text-shadow: 1px 1px black;
-    /* height: 100vh; */
+    height: 100vh;
     width: 100%;
     padding: 2rem;
     background: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
 }
 
-@media only screen and (max-width: 600px) and (orientation: portrait) {
+@media only screen and (min-width: 600px) and (orientation: landscape) {
     .container {
-        height: 100vh;
+        height: auto;
     }
 }
 

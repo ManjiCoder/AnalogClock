@@ -58,7 +58,7 @@ setInterval(() => {
         s = 90;
     }
     if (hrs != 0) {
-        s = s + 30;
+        s += 30;
         let rotation = rotate;
         rotation = rotate + hrs * 30;
         // console.log(rotation);
