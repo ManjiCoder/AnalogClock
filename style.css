@@ -1,9 +1,12 @@
-/* CSS Reset */
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&display=swap');
 
+/* CSS Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Arima Madurai', cursive;
 }
 
 .container {
@@ -11,7 +14,9 @@
     text-shadow: 1px 1px black;
     height: 100vh;
     width: 100%;
-    background: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
+    padding: 2rem;
+    background: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486); 
+
 }
 
 h1 {
@@ -19,7 +24,7 @@ h1 {
     padding: 2rem 0;
 }
 
-#circle {
+#clock {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,17 +41,43 @@ h1 {
     width: 180px;
 }
 
-#sec {
-    background: white;
+#sec::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 90px;
+    background: tomato;
+    z-index: 1;
 }
 
-#min {
+#min::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 90px;
+    background: blue;
+    z-index: 1;
+}
+
+#hr::before {
+    position: absolute;
+    content: "";
+    height: 5px;
+    width: 90px;
+    background: yellow;
+    z-index: 1;
+}
+
+/* DO NOT USE ID or CLASS USE Pseudo Selector to show 50% visibility of the Elements */
+
+/* #min {
     background: #6d3375;
-}
+    z-index: 2;
+} */
 
-#hr {
+/* #hr {
     background: limegreen;
-}
+} */
 
 .num {
     position: relative;
