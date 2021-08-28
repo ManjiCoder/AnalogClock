@@ -1,0 +1,71 @@
+/* CSS Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    color: white;
+    text-shadow: 1px 1px black;
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
+}
+
+h1 {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+#circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 225px;
+    width: 220px;
+    margin: 3rem auto;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+.hands {
+    position: absolute;
+    height: 5px;
+    width: 180px;
+}
+
+#sec {
+    background: white;
+}
+
+#min {
+    background: #6d3375;
+}
+
+#hr {
+    background: limegreen;
+}
+
+.num {
+    position: relative;
+}
+
+#twelve {
+    bottom: 100px;
+    left: 11px
+}
+
+#three {
+    left: 100px;
+}
+
+#six {
+    top: 100px;
+    left: -8px;
+}
+
+#nine {
+    right: 118px;
+}
