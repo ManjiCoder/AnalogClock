@@ -53,7 +53,7 @@ setInterval(() => {
     // Variables Declaraiton
     let date = new Date()
     let hrs = date.getHours()
-    // hrs = 18;
+    hrs = 4;
     if (hrs == 0) {
         s = 90;
     }
