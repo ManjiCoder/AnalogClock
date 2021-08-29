@@ -1,4 +1,4 @@
-// THIS IS FOR SECONDS
+// Variables Declartion
 let sec = document.getElementById('sec')
 let min = document.getElementById('min')
 let hr = document.getElementById('hr')
@@ -15,18 +15,11 @@ setInterval(() => {
     // Variables Declaraiton
     let date = new Date()
     let secs = date.getUTCSeconds()
-    // secs = 30;
-    if (secs == 0) {
-        s = 90;
-    }
-    if (secs != 0) {
-        s += 6;
-        let rotation = rotate;
-        rotation = rotate + secs * 6;
-        min.style.transition = "all 1s ease"
-        sec.style.transform = "rotate(" + rotation + "deg)";
-
-    }
+    s += 6;
+    let rotation = rotate;
+    rotation = rotate + secs * 6;
+    // min.style.transition = "all 0.4s ease"
+    sec.style.transform = "rotate(" + rotation + "deg)";
 }, 1000);
 
 // THIS IS FOR MINITUES
@@ -34,18 +27,12 @@ setInterval(() => {
     // Variables Declaraiton
     let date = new Date()
     let mins = date.getMinutes()
-    // mins = 46;
-    if (mins == 0) {
-        s = 90;
-    }
-    if (mins != 0) {
-        s += 6;
-        let rotation = rotate;
-        rotation = rotate + mins * 6;
-        min.style.transition = "all 1s ease"
-        min.style.transform = "rotate(" + rotation + "deg)";
-
-    }
+    // mins = 59;
+    s += 6;
+    let rotation = rotate;
+    rotation = rotate + mins * 6;
+    min.style.transition = "all 1s ease"
+    min.style.transform = "rotate(" + rotation + "deg)";
 }, 1000);
 
 // THIS IS FOR HOURS
@@ -54,16 +41,13 @@ setInterval(() => {
     // Variables Declaraiton
     let date = new Date()
     let hrs = date.getHours()
-    // hrs = 4;
-    if (hrs == 0) {
-        s = 90;
-    }
-    if (hrs != 0) {
-        s += 30;
-        let rotation = rotate;
-        rotation = rotate + hrs * 30;
-        // console.log(rotation);
-        hr.style.transform = "rotate(" + rotation + "deg)";
-    }
-    // console.log(hrs);
+    let mins = date.getMinutes()
+    // mins = 60;
+    hrs = hrs * 60 + mins;
+    s += 0.5;
+    let rotation = rotate;
+    rotation = rotate + hrs * 0.5; // 90 + (hrs*60+mins) * 0.5; 
+    // For Example 90 + (2*60+22) * 0.5 // Expected 162.5 
+    // console.log(rotation);
+    hr.style.transform = "rotate(" + rotation + "deg)";
 }, 1000);
