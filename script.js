@@ -3,7 +3,7 @@ let sec = document.getElementById('sec')
 let min = document.getElementById('min')
 let hr = document.getElementById('hr')
 
-// SETTING ALL HANDS TO 12;
+// SETTING ALL HANDS TO 0 Degree;
 sec.style.transform = "rotate(90deg)"
 min.style.transform = "rotate(90deg)"
 hr.style.transform = "rotate(90deg)"
@@ -23,6 +23,7 @@ setInterval(() => {
         s += 6;
         let rotation = rotate;
         rotation = rotate + secs * 6;
+        min.style.transition = "all 1s ease"
         sec.style.transform = "rotate(" + rotation + "deg)";
 
     }
@@ -41,10 +42,10 @@ setInterval(() => {
         s += 6;
         let rotation = rotate;
         rotation = rotate + mins * 6;
+        min.style.transition = "all 1s ease"
         min.style.transform = "rotate(" + rotation + "deg)";
 
     }
-    // console.log(mins);
 }, 1000);
 
 // THIS IS FOR HOURS
@@ -53,7 +54,7 @@ setInterval(() => {
     // Variables Declaraiton
     let date = new Date()
     let hrs = date.getHours()
-    hrs = 4;
+    // hrs = 4;
     if (hrs == 0) {
         s = 90;
     }
