@@ -21,7 +21,7 @@
 
 /* Media Query for Landscape Mode */
 
-@media only screen and (max-width: 500px) and (max-width: 1300px) and (orientation: landscape) {
+@media only screen and (max-width: 1080px) and (orientation: landscape) {
     .container {
         height: auto;
     }
