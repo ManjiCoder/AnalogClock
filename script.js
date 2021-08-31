@@ -18,7 +18,6 @@ setInterval(() => {
     s += 6;
     let rotation = rotate;
     rotation = rotate + secs * 6;
-    // min.style.transition = "all 0.4s ease"
     sec.style.transform = "rotate(" + rotation + "deg)";
 }, 1000);
 
@@ -31,7 +30,6 @@ setInterval(() => {
     s += 6;
     let rotation = rotate;
     rotation = rotate + mins * 6;
-    min.style.transition = "all 1s ease"
     min.style.transform = "rotate(" + rotation + "deg)";
 }, 1000);
 
@@ -42,12 +40,13 @@ setInterval(() => {
     let date = new Date()
     let hrs = date.getHours()
     let mins = date.getMinutes()
-    // mins = 60;
+    // mins = 22;
     hrs = hrs * 60 + mins;
     s += 0.5;
     let rotation = rotate;
     rotation = rotate + hrs * 0.5; // 90 + (hrs*60+mins) * 0.5; 
     // For Example 90 + (2*60+22) * 0.5 // Expected 162.5 
     // console.log(rotation);
+    // console.log(hrs);
     hr.style.transform = "rotate(" + rotation + "deg)";
 }, 1000);

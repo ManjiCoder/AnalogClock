@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@900&display=swap');
 
 /* CSS Reset */
+
 * {
     margin: 0;
     padding: 0;
@@ -18,8 +19,9 @@
     background: linear-gradient(to right top, #6d327c, #485DA6, #00a1ba, #00BF98, #36C486);
 }
 
-/* Media Query for landscape Mode */
-@media only screen and (min-width: 500px) and (max-width: 1300px) and (orientation: landscape) {
+/* Media Query for Landscape Mode */
+
+@media only screen and (max-width: 500px) and (max-width: 1300px) and (orientation: landscape) {
     .container {
         height: auto;
     }
@@ -39,6 +41,19 @@ h1 {
     margin: 3rem auto;
     border: 2px solid white;
     border-radius: 50%;
+    transform: scale(1.4, 1.4);
+}
+
+/* Media Query for Phone In Portrait Mode */
+
+@media only screen and (max-width: 400px) and (orientation: portrait) {
+    #clock {
+        transform: scale(1, 1);
+        margin: 1rem auto;
+    }
+    .container {
+        padding: 0;
+    }
 }
 
 #centerCircle {
@@ -59,6 +74,7 @@ h1 {
 }
 
 /* DO NOT USE ID or CLASS: USE Pseudo Selector to show 50% visibility of the Elements(Hands fo Clock) */
+
 #sec::before {
     position: absolute;
     content: "";
@@ -98,6 +114,7 @@ h1 {
 }
 
 /* All the Number of Clock */
+
 .num {
     position: relative;
 }
